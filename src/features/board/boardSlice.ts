@@ -1,7 +1,18 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState, AppThunk } from '../../app/store';
-import { BoardState, Tile } from './boardSlice.d.ts'
 
+export interface BoardState {
+  scoreToWin: number,
+  score: { p1: Array<string>, p2: Array<string> }
+  turn: 1 | 2
+  winner: false | 1 | 2
+  grid: Array<Tile>
+}
+
+export interface Tile {
+  slotsIndex: number,
+  value: Array<1 | 2>
+}
 
 function updateScore(state: BoardState): { p1: Array<string>, p2: Array<string> } {
   let p1: Array<string> = [];
