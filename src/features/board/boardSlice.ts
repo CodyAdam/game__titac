@@ -20,7 +20,7 @@ const SCORE_TO_WIN = 3;
 
 const initialState: BoardState = {
   score: { p1: [], p2: [] },
-  turn: 1,
+  turn: Math.random() < 0.5 ? 1 : 2,
   winner: false,
   grid: [
     { slotsIndex: 0, value: [] },
@@ -52,8 +52,10 @@ export const boardSlice = createSlice({
         state.winner = getWinner(state);
       }
     },
-    reset: (state) => {
-      return initialState;
+    reset: (state, action: PayloadAction<1 | 2>) => {
+      state = { ...initialState }
+      state.turn = action.payload;
+      return state
     }
   }
 });

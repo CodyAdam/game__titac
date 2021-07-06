@@ -27,7 +27,7 @@ export function Control() {
                 </button>
             </div>
             <div className={styles.controlButtonContainer}>
-                <button className={styles.controlButton} onClick={() => dispatch(reset())}>
+                <button className={styles.controlButton} onClick={() => dispatch(reset(Math.random() > 0.5 ? 1 : 2))}>
                     <div className={styles.controlButtonInside}>reset</div>
                 </button>
             </div>
