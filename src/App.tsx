@@ -1,5 +1,4 @@
 import React from 'react';
-import { Counter } from './features/counter/Counter';
 import { Board } from './features/board/Board';
 import { Score } from './features/board/Score';
 import './App.css';
