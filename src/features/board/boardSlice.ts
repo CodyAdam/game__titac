@@ -1,8 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState, AppThunk } from '../../app/store';
+import { Direction } from './Lines';
 
 export interface BoardState {
-  score: { p1: Array<string>, p2: Array<string> }
+  score: { p1: Array<Direction>, p2: Array<Direction> }
   turn: 1 | 2
   winner: false | 1 | 2
   grid: Array<Tile>
@@ -68,12 +69,12 @@ export default boardSlice.reducer;
 
 // HELPERS
 
-function getScoreGrid(state: BoardState): { score: { p1: Array<string>, p2: Array<string> }, grid: Array<Tile> } {
-  const p1: Array<string> = state.score.p1;
-  const p2: Array<string> = state.score.p2;
+function getScoreGrid(state: BoardState): { score: { p1: Array<Direction>, p2: Array<Direction> }, grid: Array<Tile> } {
+  const p1: Array<Direction> = state.score.p1;
+  const p2: Array<Direction> = state.score.p2;
   let grid = state.grid;
 
-  const lines = [{ name: "tr", indices: [0, 1, 2] },
+  const lines: Array<{ name: Direction, indices: Array<number> }> = [{ name: "tr", indices: [0, 1, 2] },
   { name: "mr", indices: [3, 4, 5] },
   { name: "br", indices: [6, 7, 8] },
   { name: "lc", indices: [0, 3, 6] },
