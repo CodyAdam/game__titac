@@ -16,17 +16,17 @@
 .header {
   z-index: 10;
   font-size: 1.8rem;
-  padding: 1rem;
   flex-shrink: 1;
   text-align: center;
   color: #fce38a;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.164);
-  margin: 0 0 1rem 0;
+  margin: 0.2rem 0 2rem 0;
   line-height: 2rem;
   transition: all 0.3s cubic-bezier(0, 1.26, 0.35, 1.34);
   border-radius: 1rem;
 }
 .winning {
+  padding: 2rem 0;
   color: #f38181;
   background-color: #eaffd0;
   transform: translateY(1rem) scale(1.2);
