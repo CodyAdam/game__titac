@@ -2,7 +2,7 @@
   "name": "titac",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://codyadam.github.io/react-redux-game/",
+  "homepage": "https://codyadam.github.io/titac/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.0",
     "@testing-library/jest-dom": "^4.2.4",
