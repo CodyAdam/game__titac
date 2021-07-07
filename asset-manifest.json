@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-redux-game/static/css/main.48e72eea.chunk.css",
+    "main.js": "/react-redux-game/static/js/main.6d6bd886.chunk.js",
+    "main.js.map": "/react-redux-game/static/js/main.6d6bd886.chunk.js.map",
+    "runtime-main.js": "/react-redux-game/static/js/runtime-main.3ee0afe6.js",
+    "runtime-main.js.map": "/react-redux-game/static/js/runtime-main.3ee0afe6.js.map",
+    "static/js/2.fd1c7e7f.chunk.js": "/react-redux-game/static/js/2.fd1c7e7f.chunk.js",
+    "static/js/2.fd1c7e7f.chunk.js.map": "/react-redux-game/static/js/2.fd1c7e7f.chunk.js.map",
+    "index.html": "/react-redux-game/index.html",
+    "static/css/main.48e72eea.chunk.css.map": "/react-redux-game/static/css/main.48e72eea.chunk.css.map",
+    "static/js/2.fd1c7e7f.chunk.js.LICENSE.txt": "/react-redux-game/static/js/2.fd1c7e7f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3ee0afe6.js",
+    "static/js/2.fd1c7e7f.chunk.js",
+    "static/css/main.48e72eea.chunk.css",
+    "static/js/main.6d6bd886.chunk.js"
+  ]
+}
