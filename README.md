@@ -1,6 +1,8 @@
-## [Play here](https://codyadam.github.io/react-redux-game/)
+# [Play here](https://codyadam.github.io/react-redux-game/)
 
-This is 'Blue Yellow Blue' a Tic-Tac-Toe game with a new mechanic.
+![thumbnail image](./thumb.png)
+
+This is 'Titac' a Tic-Tac-Toe game with a new mechanic.
 I made this game to familiarise myself with Redux using React.
 
 # Concept
