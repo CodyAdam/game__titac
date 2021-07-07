@@ -1,4 +1,4 @@
-# [Play here](https://codyadam.github.io/react-redux-game/)
+# [Play here](https://codyadam.github.io/titac/)
 
 ![thumbnail image](./thumb.png)
 
