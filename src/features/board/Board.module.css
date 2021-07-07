@@ -1,143 +1,148 @@
 .container {
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    max-width: 14.6rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 14.6rem;
 }
 .subHeader {
-    font-size: small;
-    margin: 0;
-    text-align: center;
-    color: #fce38a;
-    font-weight: 900;
-    font-style: italic;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.164);
+  font-size: small;
+  margin: 0;
+  text-align: center;
+  color: #fce38a;
+  font-weight: 900;
+  font-style: italic;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.164);
 }
 .header {
-    z-index: 10;
-    font-size: 1.8rem;
-    padding: 1rem;
-    flex-shrink: 1;
-    text-align: center;
-    color: #fce38a;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.164);
-    margin: 0 0 1rem 0;
-    line-height: 2rem;
-    transition: all 0.3s cubic-bezier(0, 1.26, 0.35, 1.34);
-    border-radius: 10px;
+  z-index: 10;
+  font-size: 1.8rem;
+  padding: 1rem;
+  flex-shrink: 1;
+  text-align: center;
+  color: #fce38a;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.164);
+  margin: 0 0 1rem 0;
+  line-height: 2rem;
+  transition: all 0.3s cubic-bezier(0, 1.26, 0.35, 1.34);
+  border-radius: 10px;
 }
 .winning {
-    color: #f38181;
-    background-color: #eaffd0;
-    transform: translateY(1rem) scale(1.2);
+  color: #f38181;
+  background-color: #eaffd0;
+  transform: translateY(1rem) scale(1.2);
 }
 
 .grid {
-    display: grid;
-    grid-gap: 1.3rem;
-    grid-template-columns: repeat(3, 4rem);
+  position: relative;
+  display: grid;
+  gap: 1.3rem;
+  grid-template-columns: repeat(3, 4rem);
 }
 .cell {
-    cursor: pointer;
-    position: relative;
-}
-.upper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    background-color: #f38181;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 10px;
-    top: -0.5rem;
-    transition: all 0.05s cubic-bezier(0, 1.26, 0.35, 1.34);
+  position: relative;
 }
 
-.cell:hover .upper {
-    top: -1.4rem;
+.cell.notfull {
+  cursor: pointer;
+}
+.upper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #ffeea0;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 10px;
+  top: -0.5rem;
+  transition: all 0.05s cubic-bezier(0, 1.26, 0.35, 1.34);
+}
+
+.cell:hover.notfull .upper {
+  top: -1.4rem;
+}
+
+.notfull .upper {
+  background-color: #f38181;
 }
 
 .under {
-    background-color: #fce38a;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 10px;
+  background-color: #fce38a;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 10px;
 }
 
 .inside {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-    line-height: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  line-height: 1.6rem;
 }
 
 .item {
-    margin: 0 0.3rem;
-    color: #eaffd0;
-    font-size: 1rem;
+  margin: 0 0.3rem;
+  color: #eaffd0;
+  font-size: 1rem;
 }
 .used {
-    opacity: 20%;
-}
-.full {
-    opacity: 30%;
+  opacity: 10%;
 }
 
 .controlBar {
-    margin-top: 2rem;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .controlButton {
-    border: none;
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-    font-family: inherit;
-    cursor: pointer;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 .controlButtonInside {
-    padding: 0.8rem;
-    border-radius: 10px;
-    background-color: #eaffd0;
-    color: #f38181;
-    font-size: 1.3rem;
-    font-family: inherit;
-    font-weight: 900;
+  padding: 0.8rem;
+  border-radius: 10px;
+  background-color: #eaffd0;
+  color: #f38181;
+  font-size: 1.3rem;
+  font-family: inherit;
+  font-weight: 900;
 
-    transition: all 0.05s cubic-bezier(0, 1.26, 0.35, 1.34);
+  transition: all 0.05s cubic-bezier(0, 1.26, 0.35, 1.34);
 }
 
 .controlButton:disabled {
-    opacity: 40%;
+  opacity: 40%;
 }
 .controlButton:hover.controlButton:enabled .controlButtonInside {
-    transform: translateY(-1rem);
+  transform: translateY(-1rem);
 }
 .controlButton:active.controlButton:enabled .controlButtonInside {
-    background-color: white;
-    transform: translateY(-0.5rem);
+  background-color: white;
+  transform: translateY(-0.5rem);
 }
 
 .scoreContainer {
-    display: flex;
-    flex-direction: column;
-    margin: 2rem;
-    background-color: #eaffd0;
-    padding: 2rem;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  background-color: #eaffd0;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .scoreHeader {
-    font-size: 2rem;
-    font-family: inherit;
-    font-weight: 900;
-    text-align: center;
-    color: #f38181;
+  font-size: 2rem;
+  font-family: inherit;
+  font-weight: 900;
+  text-align: center;
+  color: #f38181;
 }
