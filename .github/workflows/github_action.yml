@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Build and deploy
 
 # Controls when the workflow will run
 on:
@@ -33,5 +33,8 @@ jobs:
         run: CI='' npm run build
 
       # Runs a set of commands using the runners shell
-      - name: Run deploy
-        run: npm run deploy
+      - name: Deploy
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
