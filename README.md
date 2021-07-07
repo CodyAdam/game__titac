@@ -1,7 +1,7 @@
 # [Play here](https://codyadam.github.io/titac/)
 
-![logo image](./thumb.png)
-![game image](./thumb2.png)
+![logo image](./public/thumb.png)
+![game image](./public/thumb2.png)
 
 # Concept
 
