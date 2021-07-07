@@ -2,7 +2,7 @@
   "name": "react-redux-byb",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://codyadam.github.io/react-redux-game-byb/",
+  "homepage": "https://codyadam.github.io/react-redux-game/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.0",
     "@testing-library/jest-dom": "^4.2.4",
