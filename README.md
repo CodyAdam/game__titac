@@ -2,12 +2,11 @@
 
 ![thumbnail image](./thumb.png)
 
-This is 'Titac' a Tic-Tac-Toe game with a new mechanic.
-I made this game to familiarise myself with Redux using React.
-
 # Concept
 
-Tic Tac Toe but you can place 3 mark per tile
+This is 'Titac' a Tic-Tac-Toe game with a new mechanic
+
+It's Tic-Tac-Toe but you can place up to 3 mark per cell
 
 # The Rules
 
