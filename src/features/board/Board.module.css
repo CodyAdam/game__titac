@@ -87,7 +87,7 @@
   font-size: 1rem;
 }
 .used {
-  opacity: 10%;
+  opacity: 0.1;
 }
 
 .controlBar {
@@ -120,7 +120,7 @@
 }
 
 .controlButton:disabled {
-  opacity: 40%;
+  opacity: 0.4;
 }
 .controlButton:hover.controlButton:enabled .controlButtonInside {
   transform: translateY(-1rem);
