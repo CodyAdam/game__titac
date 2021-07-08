@@ -27,6 +27,7 @@
   max-width: 14.6rem;
 }
 .score {
+  margin-top: 1rem;
   width: 100%;
   justify-content: space-between;
 }
