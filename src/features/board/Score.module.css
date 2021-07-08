@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  background-color: #eaffd0;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.header {
+  font-size: 2rem;
+  font-family: inherit;
+  font-weight: 900;
+  text-align: center;
+  color: #f38181;
+}
+
+.smallContainer {
+  display: flex;
+  flex-direction: row;
+  background-color: #eaffd0;
+  justify-content: center;
+  border-radius: 1rem;
+  padding: 0.3rem;
+  max-width: 6.43rem;
+  flex-grow: 1;
+}
+
+.smallHeader {
+  font-size: 1.4rem;
+  font-family: inherit;
+  font-weight: 900;
+  text-align: center;
+  color: #f38181;
+}

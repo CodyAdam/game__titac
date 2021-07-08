@@ -129,20 +129,3 @@
   background-color: white;
   transform: translateY(-0.5rem);
 }
-
-.scoreContainer {
-  display: flex;
-  flex-direction: column;
-  margin: 2rem;
-  background-color: #eaffd0;
-  padding: 2rem;
-  border-radius: 1rem;
-}
-
-.scoreHeader {
-  font-size: 2rem;
-  font-family: inherit;
-  font-weight: 900;
-  text-align: center;
-  color: #f38181;
-}

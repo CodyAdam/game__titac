@@ -1,20 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Board } from './features/board/Board';
 import { Score } from './features/board/Score';
 import { Banner } from './features/banner/Banner';
-import './App.css';
+
+import styles from './App.module.css';
 
 function App() {
-  return (
-    <div className='App'>
-      <Banner />
-      <div className='container'>
-        <Score player={1} />
+  const [width, setWidth] = useState<number>(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    };
+  }, []);
+
+  let isMobile: boolean = width <= 768;
+
+  if (isMobile)
+    return (
+      <div className={styles.app}>
         <Board />
-        <Score player={2} />
+        <div className={styles.row + ' ' + styles.score + ' ' + styles.small}>
+          <Score player={1} small={true} />
+          <Score player={2} small={true} />
+        </div>
       </div>
-    </div>
-  );
+    );
+  else
+    return (
+      <div className={styles.app}>
+        <Banner />
+        <div className={styles.row}>
+          <Score player={1} small={false} />
+          <Board />
+          <Score player={2} small={false} />
+        </div>
+      </div>
+    );
 }
 
 export default App;
