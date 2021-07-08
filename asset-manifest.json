@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/titac/static/css/main.ca15265e.chunk.css",
-    "main.js": "/titac/static/js/main.32ab3e0b.chunk.js",
-    "main.js.map": "/titac/static/js/main.32ab3e0b.chunk.js.map",
+    "main.css": "/titac/static/css/main.8fe704ad.chunk.css",
+    "main.js": "/titac/static/js/main.d4c625ee.chunk.js",
+    "main.js.map": "/titac/static/js/main.d4c625ee.chunk.js.map",
     "runtime-main.js": "/titac/static/js/runtime-main.1d60218e.js",
     "runtime-main.js.map": "/titac/static/js/runtime-main.1d60218e.js.map",
-    "static/js/2.f024a3b7.chunk.js": "/titac/static/js/2.f024a3b7.chunk.js",
-    "static/js/2.f024a3b7.chunk.js.map": "/titac/static/js/2.f024a3b7.chunk.js.map",
+    "static/js/2.506013dd.chunk.js": "/titac/static/js/2.506013dd.chunk.js",
+    "static/js/2.506013dd.chunk.js.map": "/titac/static/js/2.506013dd.chunk.js.map",
     "index.html": "/titac/index.html",
-    "static/css/main.ca15265e.chunk.css.map": "/titac/static/css/main.ca15265e.chunk.css.map",
-    "static/js/2.f024a3b7.chunk.js.LICENSE.txt": "/titac/static/js/2.f024a3b7.chunk.js.LICENSE.txt"
+    "static/css/main.8fe704ad.chunk.css.map": "/titac/static/css/main.8fe704ad.chunk.css.map",
+    "static/js/2.506013dd.chunk.js.LICENSE.txt": "/titac/static/js/2.506013dd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1d60218e.js",
-    "static/js/2.f024a3b7.chunk.js",
-    "static/css/main.ca15265e.chunk.css",
-    "static/js/main.32ab3e0b.chunk.js"
+    "static/js/2.506013dd.chunk.js",
+    "static/css/main.8fe704ad.chunk.css",
+    "static/js/main.d4c625ee.chunk.js"
   ]
 }
