@@ -3,7 +3,20 @@
 html {
   font-size: 25px;
 }
+
+@media only screen and (max-height: 740px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-height: 570px) {
+  html {
+    font-size: 15px;
+  }
+}
+
 body {
+  background-color: #95e1d3;
   user-select: none;
   margin: 0;
   font-family: 'Nunito', sans-serif;
