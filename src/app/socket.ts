@@ -10,7 +10,7 @@ export function connect(ip: string, setConnected: Dispatch<SetStateAction<boolea
 
   if (socket.connected) socket.disconnect();
 
-  socket = io(`wss://${ip}`);
+  socket = io(`ws://${ip}`);
   console.log(socket.connected);
 
   socket.on('connect', () => {
