@@ -1,4 +1,4 @@
-# [Play here](https://codyadam.github.io/titac/)
+# [Play here](http://titac.ml)
 
 ![logo image](./public/thumb.png)
 ![game image](./public/thumb2.png)
@@ -18,6 +18,8 @@ It's Tic-Tac-Toe but you can place up to 3 mark per cell
 - 3 points to win
 
 # Technologie
+
+- [titac-server](https://github.com/CodyAdam/titac-server)
 
 - [Typescript](https://www.typescriptlang.org/)
 - [React](https://reactjs.org/)
