@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styles from './Multi.module.css';
-import { socket, connect } from '../../app/socket';
+import { connect } from '../../app/socket';
 
 export function Multi() {
-  const [ip, setIp] = useState('localhost:8080');
+  const [ip, setIp] = useState('localhost:2222');
   const [connected, setConnected] = useState(false);
 
   return (
