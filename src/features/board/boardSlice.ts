@@ -1,8 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState, AppThunk } from '../../app/store';
+import { RootState } from '../../app/store';
 import { Direction } from './Lines';
 
 export interface BoardState {
+  received: boolean,
   score: { p1: Array<Direction>, p2: Array<Direction> }
   turn: 1 | 2
   winner: false | 1 | 2
@@ -20,6 +21,7 @@ const MAX_PER_TILE = 3;
 const SCORE_TO_WIN = 3;
 
 const initialState: BoardState = {
+  received: true,
   score: { p1: [], p2: [] },
   turn: Math.random() < 0.5 ? 1 : 2,
   winner: false,
@@ -51,17 +53,24 @@ export const boardSlice = createSlice({
         state.score = score;
         state.grid = grid;
         state.winner = getWinner(state);
+        state.received = false;
       }
+    },
+    set: (state, action: PayloadAction<BoardState>) => {
+      state = { ...action.payload };
+      state.received = true;
+      return state;
     },
     reset: (state, action: PayloadAction<1 | 2>) => {
       state = { ...initialState }
       state.turn = action.payload;
+      state.received = false;
       return state
     }
   }
 });
 
-export const { playAt, reset } = boardSlice.actions;
+export const { playAt, reset, set } = boardSlice.actions;
 
 export const selectGrid = (state: RootState) => state.board.present.grid;
 

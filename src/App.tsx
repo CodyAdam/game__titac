@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Board } from './features/board/Board';
 import { Score } from './features/board/Score';
 import { Banner } from './features/banner/Banner';
+import { Multi } from './features/multi/Multi';
 
 import styles from './App.module.css';
 
@@ -34,6 +35,7 @@ function App() {
   else
     return (
       <div className={styles.app}>
+        <Multi />
         <Banner />
         <div className={styles.row}>
           <Score player={1} small={false} />
