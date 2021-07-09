@@ -3,7 +3,7 @@ import styles from './Multi.module.css';
 import { connect } from '../../app/socket';
 
 export function Multi() {
-  const [ip, setIp] = useState('localhost:2222');
+  const [ip, setIp] = useState('88.123.1.223:2222');
   const [connected, setConnected] = useState(false);
 
   return (
