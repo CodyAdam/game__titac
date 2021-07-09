@@ -25,10 +25,10 @@
   border-radius: 1rem;
 }
 .winning {
-  padding: 2rem 0;
+  padding: 0.6rem 0;
   color: #f38181;
   background-color: #eaffd0;
-  transform: translateY(1rem) scale(1.2);
+  transform: translateY(0.4rem) scale(1.2);
 }
 
 .grid {

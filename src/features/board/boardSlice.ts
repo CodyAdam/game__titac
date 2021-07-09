@@ -7,7 +7,7 @@ export interface BoardState {
   score: { p1: Array<Direction>, p2: Array<Direction> }
   turn: 1 | 2
   fake: boolean
-  winner: false | 1 | 2
+  winner: false | 1 | 2 | 3
   grid: Array<Tile>
 }
 
@@ -149,12 +149,17 @@ function getLine(grid: Array<Tile>, indices: Array<number>,): false | 1 | 2 {
   return false;
 }
 
-function getWinner(state: BoardState): false | 1 | 2 {
-  if (state.score.p1.length >= SCORE_TO_WIN)
-    return 1;
-  else if (state.score.p2.length >= SCORE_TO_WIN)
-    return 2
-  else return false;
+function getWinner(state: BoardState): false | 1 | 2 | 3 {
+  let roomLeft = false;
+  state.grid.forEach(tile => {
+    if (tile.slotsIndex < 3)
+      roomLeft = true
+  });
+  if (roomLeft) return false;
+
+  if (state.score.p1.length === state.score.p2.length) return 3
+  else if (state.score.p1.length > state.score.p2.length) return 1
+  else return 2
 }
 
 export function getSymbol(player: 1 | 2 | 3): string {

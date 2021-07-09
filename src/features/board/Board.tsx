@@ -14,7 +14,11 @@ export function Board() {
   const winner = useAppSelector((state) => state.board.present.winner);
 
   const header = winner ? (
-    <h1 className={styles.header + ' ' + styles.winning}> Winner is {getSymbol(winner)}</h1>
+    winner === 3 ? (
+      <h1 className={styles.header + ' ' + styles.winning}>Draw!</h1>
+    ) : (
+      <h1 className={styles.header + ' ' + styles.winning}>Winner is {getSymbol(winner)}!</h1>
+    )
   ) : present.fake ? (
     <h1 className={styles.header}>
       {`${getSymbol(turn)} place a `}
@@ -56,7 +60,7 @@ export function Board() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.subHeader}>Make 3 lines to win</div>
+      {/* <div className={styles.subHeader}>Make 3 lines to win</div> */}
       {header}
       <div className={styles.grid}>
         <Lines />
