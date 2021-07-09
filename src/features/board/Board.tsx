@@ -15,22 +15,27 @@ export function Board() {
 
   const header = winner ? (
     <h1 className={styles.header + ' ' + styles.winning}> Winner is {getSymbol(winner)}</h1>
-  ) : turn === 1 ? (
-    <h1 className={styles.header}>Player {getSymbol(1)} turn</h1>
+  ) : present.fake ? (
+    <h1 className={styles.header}>
+      {`${getSymbol(turn)} place a `}
+      <span className={styles.used}>{getSymbol(3)}</span>
+    </h1>
   ) : (
-    <h1 className={styles.header}>Player {getSymbol(2)} turn</h1>
+    <h1 className={styles.header}>{`${getSymbol(turn)} place a ${getSymbol(turn)}`}</h1>
   );
-
   useEffect(() => {
     if (!present.received && socket && socket.connected) socket.emit('state', present);
   });
 
   const tiles = grid.map((tile: Tile, index: number) => {
-    const items = tile.value.map((item, subIndex) => (
-      <div className={styles.item + ' ' + (item.used ? styles.used : '')} key={index + subIndex}>
-        {getSymbol(item.player)}
-      </div>
-    ));
+    const items = tile.value.map((item, subIndex) => {
+      const symbol: string = item.used ? getSymbol(3) : getSymbol(item.player);
+      return (
+        <div className={styles.item + ' ' + (item.used ? styles.used : '')} key={index + subIndex}>
+          {symbol}
+        </div>
+      );
+    });
     return (
       <div
         key={index}

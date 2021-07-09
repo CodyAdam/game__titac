@@ -6,6 +6,7 @@ export interface BoardState {
   received: boolean,
   score: { p1: Array<Direction>, p2: Array<Direction> }
   turn: 1 | 2
+  fake: boolean
   winner: false | 1 | 2
   grid: Array<Tile>
 }
@@ -22,6 +23,7 @@ const SCORE_TO_WIN = 3;
 
 const initialState: BoardState = {
   received: true,
+  fake: false,
   score: { p1: [], p2: [] },
   turn: Math.random() < 0.5 ? 1 : 2,
   winner: false,
@@ -47,8 +49,10 @@ export const boardSlice = createSlice({
       const player = state.turn;
       if (state.grid[cell].slotsIndex < MAX_PER_TILE) {
         state.grid[cell].slotsIndex++;
-        state.grid[cell].value.push({ used: false, player });
-        state.turn = player === 1 ? 2 : 1;
+        state.grid[cell].value.push({ used: state.fake, player });
+        if (!state.fake)
+          state.turn = player === 1 ? 2 : 1;
+        state.fake = !state.fake;
         const { score, grid } = getScoreGrid(state);
         state.score = score;
         state.grid = grid;
@@ -153,8 +157,8 @@ function getWinner(state: BoardState): false | 1 | 2 {
   else return false;
 }
 
-export function getSymbol(player: 1 | 2): string {
+export function getSymbol(player: 1 | 2 | 3): string {
   if (player === 1) return '🟡';
   else if (player === 2) return '🔵';
-  else return '?';
+  else return '⚫';
 }
