@@ -6,12 +6,14 @@ import { BoardState, set } from '../features/board/boardSlice'
 export let socket: ReturnType<typeof io>;
 
 export function connect(ip: string, setConnected: Dispatch<SetStateAction<boolean>>) {
+  if (socket && socket.connected) socket.disconnect();
   console.log('try to connect to : ' + ip);
 
-  if (socket && socket.connected) socket.disconnect();
 
-  socket = io(`ws://${ip}`);
-  console.log(socket.connected);
+  socket = io(`ws://${ip}`, {
+    timeout: 3000,
+    reconnection: false,
+  });
 
   socket.on('connect', () => {
     console.log('connected');
@@ -25,6 +27,4 @@ export function connect(ip: string, setConnected: Dispatch<SetStateAction<boolea
     console.log('disconnected');
     setConnected(false);
   });
-  socket.on('ping', (msg) => console.log(msg));
-
 }
