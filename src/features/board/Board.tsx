@@ -22,7 +22,7 @@ export function Board() {
   );
 
   useEffect(() => {
-    if (!present.received) socket.emit('state', present);
+    if (!present.received && socket && socket.connected) socket.emit('state', present);
   });
 
   const tiles = grid.map((tile: Tile, index: number) => {
@@ -38,7 +38,6 @@ export function Board() {
         onClick={() => {
           if (!winner) {
             dispatch(playAt(index));
-            socket.emit('ping', 'box clicked');
           }
         }}
       >

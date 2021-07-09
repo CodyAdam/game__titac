@@ -3,12 +3,12 @@ import { io } from 'socket.io-client';
 import { store } from './store';
 import { BoardState, set } from '../features/board/boardSlice'
 
-export let socket: ReturnType<typeof io> = io();
+export let socket: ReturnType<typeof io>;
 
 export function connect(ip: string, setConnected: Dispatch<SetStateAction<boolean>>) {
   console.log('try to connect to : ' + ip);
 
-  if (socket.connected) socket.disconnect();
+  if (socket && socket.connected) socket.disconnect();
 
   socket = io(`ws://${ip}`);
   console.log(socket.connected);
