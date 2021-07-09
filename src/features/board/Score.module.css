@@ -5,6 +5,8 @@
   background-color: #eaffd0;
   padding: 2rem;
   border-radius: 1rem;
+
+  color: #f38181;
 }
 
 .header {
@@ -12,7 +14,6 @@
   font-family: inherit;
   font-weight: 900;
   text-align: center;
-  color: #f38181;
 }
 
 .smallContainer {
@@ -24,6 +25,8 @@
   padding: 0.3rem;
   max-width: 6.43rem;
   flex-grow: 1;
+
+  color: #f38181;
 }
 
 .smallHeader {
@@ -31,5 +34,9 @@
   font-family: inherit;
   font-weight: 900;
   text-align: center;
-  color: #f38181;
+}
+
+.turn {
+  background-color: #f38181;
+  color: white;
 }
