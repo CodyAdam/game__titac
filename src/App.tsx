@@ -25,6 +25,7 @@ function App() {
   if (isMobile)
     return (
       <div className={styles.app}>
+        <Multi />
         <Board />
         <div className={styles.row + ' ' + styles.score + ' ' + styles.small}>
           <Score player={1} small={true} />

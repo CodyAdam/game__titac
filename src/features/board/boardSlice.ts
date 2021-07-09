@@ -105,14 +105,10 @@ function getScoreGrid(state: BoardState): { score: { p1: Array<Direction>, p2: A
   return { score: { p1, p2 }, grid };
 }
 function setUsed(grid: Array<Tile>, indices: Array<number>, player: 1 | 2): Array<Tile> {
-  console.log("SetUsed Called");
-
   indices.forEach(index => {
     for (let i = 0; i < grid[index].value.length; i++) {
       const item = grid[index].value[i];
       if (item.player === player && !item.used) {
-        console.log("         Used set to true at : " + index + "  " + i);
-
         grid[index].value[i].used = true
         break;
       }
