@@ -19,7 +19,7 @@ It's Tic-Tac-Toe but you can place up to 3 mark per cell
 
 # Technologie
 
-- [titac-server](https://github.com/CodyAdam/titac-server)
+- [titac-server](https://github.com/CodyAdam/project__titac-server)
 
 - [Typescript](https://www.typescriptlang.org/)
 - [React](https://reactjs.org/)
